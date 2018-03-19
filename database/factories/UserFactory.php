@@ -21,3 +21,36 @@ $factory->define(App\User::class, function (Faker $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+
+$factory->define(App\Categoria::class, function (Faker $faker) {
+    return [
+        'categoria' => $faker->text,
+        'descripcion' => $faker->sentence(10),
+        
+    ];
+});
+
+
+$factory->define(App\Presentacion::class, function (Faker $faker) {
+    return [
+        'presentacion' => $faker->text,
+        'descripcion' => $faker->sentence(10),
+        
+    ];
+});
+
+$factory->define(App\Producto::class, function (Faker $faker) {
+    
+    $categorias = App\Categoria::all()->pluck('id')->toArray();
+    $presentaciones = App\Presentacion::all()->pluck('id')->toArray();
+
+    return [
+        'nombre_producto' => $faker->name,
+        'descripcion' => $faker->sentence(10),
+        'codigo_barras' => $faker->randomNumber(),
+        'id_categoria' => $faker->randomElement($categorias),
+        'id_presentacion' =>$faker->randomElement($presentaciones),
+        
+    ];
+});
