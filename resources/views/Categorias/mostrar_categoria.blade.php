@@ -23,12 +23,14 @@
 		@foreach($categorias as $categoria)
 		  <tbody>
 		  	<tr>
-		    
+		    	
 	    		<td>{{$categoria->categoria}}</td>
 		    	<td>{{$categoria->descripcion}}</td>
 		    	<td>
-		    		<button class="btn-warning">Editar</button>
-		    		<button class="btn-danger">Eliminar</button>
+		    		<a href="/actualizar/{{$categoria->id}}" class="btn btn-warning" >Editar</a>
+		    		
+		    		<a href="/eliminar/{{$categoria->id}}" class="btn btn-danger">Eliminar</a>
+		    		
 		    	</td>
 	    	
 			
@@ -36,8 +38,8 @@
 		  </tbody>
 		@endforeach  
 		</table>	
-		<a href="/registro">Nuevo</a>
-		<button class="btn-success" href="/categorias/registro">Nuevo</button>
+		<a href="/registro" class="btn btn-success">Nuevo</a>
+		
 		</div>
 		
 		

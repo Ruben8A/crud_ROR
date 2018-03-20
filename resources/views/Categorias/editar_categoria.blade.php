@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Alta Categoria</title>
+	<title>Editar Categoria</title>
 		<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <!-- Latest compiled and minified JavaScript -->
@@ -10,8 +10,8 @@
 </head>
 </head>
 <body>
-	<div class="container">
-		<!--<h1>Alta Categoria</h1>
+<!--div class="container">
+		<h1>Alta Categoria</h1>
 		{!!Form::model( ['action' => 'CategoriaController@crearCategoria'])!!}
 
 		<div class="form-group">
@@ -25,27 +25,27 @@
 		</div>
 
 		{!! Form::submit('Guardar',['class'=>'btn btn-success'])!!}
-	{!!Form::close()!!}	-->
+	{!!Form::close()!!}	
+	</div>
+	-->
+	<hr>
+<div class="container">
+	<h1>Editar Categoria</h1>
 
-
-	<h1>Alta Categoria</h1>
-
-	<form action="/alta">
+	<form action="/editar">
 	    <div class="form-group">
+	      <input type="hidden" name="id" value="{{$categoria->id}}">
 	      <label for="categoria">Categoria:</label>
-	      <input type="text" class="form-control" id="categoria" placeholder="Nombre categoria" name="categoria">
+	      <input type="text" class="form-control" id="categoria" name="categoria" value="{{$categoria->categoria}}">
 	    </div>
 	    <div class="form-group">
 	      <label for="descripcion">Descripcion</label>
-	      <input type="text" class="form-control" id="descripcion" placeholder="Descripcion" name="descripcion">
+	      <input type="text" class="form-control" id="descripcion" name="descripcion" value="{{$categoria->descripcion}}">
 	    </div>
 	    
-	    <button type="submit" class="btn btn-success">Guardar</button>
+	    <button type="submit" class="btn btn-warning">Actualizar</button>
 	</form>
-	</div>
-	
-	<hr>
-
+</div>
 	
 			
 

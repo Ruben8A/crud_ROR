@@ -20,3 +20,13 @@ Route::get('/categorias','CategoriaController@index');
 Route::get('/registro','CategoriaController@registro');
 
 Route::get('/alta','CategoriaController@crearCategoria');
+
+Route::get('/actualizar/{id}','CategoriaController@editar');
+
+Route::get('/editar','CategoriaController@editarCategoria');
+
+Route::get('/eliminar/{id}','CategoriaController@eliminarCategoria');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
