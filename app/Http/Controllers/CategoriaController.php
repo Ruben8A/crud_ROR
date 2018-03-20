@@ -20,4 +20,16 @@ class CategoriaController extends Controller
     public function registro(){
     	return view("Categorias.alta_categoria");
     }
+
+    public function crearCategoria(Request $request){
+
+    	$categoria = new App\Categoria;
+
+    	$categoria->categoria = $request['categoria'];
+    	$categoria->descripcion = $request['descripcion'];
+
+    	$categoria->save();
+
+    	return redirect('/categorias');
+    }
 }

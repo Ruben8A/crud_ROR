@@ -12,7 +12,7 @@
 <body>
 	<div class="container">
 		<h1>Alta Categoria</h1>
-		{!!Form::model(['action'=>'CategoriaController@alta'])!!}
+		{!!Form::model( ['action' => 'CategoriaController@crearCategoria'])!!}
 
 		<div class="form-group">
 			{!! Form::label('categoria','Categoria')!!}

@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::get('/categorias','CategoriaController@index');
 
 Route::get('/registro','CategoriaController@registro');
+
+Route::get('/alta','CategoriaController@crearCategoria');
