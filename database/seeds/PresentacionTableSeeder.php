@@ -13,6 +13,6 @@ class PresentacionTableSeeder extends Seeder
     public function run()
     {
         //
-        factory(Presentacion::class,10)->create();
+        factory(Presentacion::class,3)->create();
     }
 }

@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/categorias','CategoriaController@index');
+
+Route::get('/categorias/registrar','CategoriaController@index');
