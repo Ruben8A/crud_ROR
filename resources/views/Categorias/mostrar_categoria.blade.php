@@ -36,7 +36,8 @@
 		  </tbody>
 		@endforeach  
 		</table>	
-		<button class="btn-success">Agregar</button>
+		<a href="/registro">Nuevo</a>
+		<button class="btn-success" href="/categorias/registro">Nuevo</button>
 		</div>
 		
 		

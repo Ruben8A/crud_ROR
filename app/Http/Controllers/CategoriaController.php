@@ -17,4 +17,7 @@ class CategoriaController extends Controller
     }
 
 
+    public function registro(){
+    	return view("Categorias.alta_categoria");
+    }
 }
